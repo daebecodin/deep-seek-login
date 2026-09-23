@@ -290,6 +290,15 @@ input::placeholder {
   line-height: 17px;
 }
 
+.signup-description {
+  margin-bottom: 8px;
+}
+
+.signup-agreement {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .reset-button {
   margin-top: 20px;
 }

@@ -49,7 +49,7 @@
 
           <div class="form-links">
             <button class="link-button" type="button" data-open-view="reset">Forgot password?</button>
-            <a href="#">Sign up</a>
+            <button class="link-button" type="button" data-open-view="signup">Sign up</button>
           </div>
 
           <button class="login-button" type="submit">Log in</button>
@@ -87,6 +87,68 @@
 
             <button class="login-button reset-button" type="submit">Continue</button>
             <button class="back-button" type="button" data-open-view="login">Back to log in</button>
+          </form>
+        </div>
+
+        <div class="view" data-view="signup" hidden>
+          <p class="view-description signup-description">
+            Only email registration is supported in your region. One DeepSeek account is all you need to access to all DeepSeek services.
+          </p>
+
+          <form class="form signup-form" novalidate>
+            <div class="field">
+              <label class="sr-only" for="signup-email">Email address</label>
+              <input id="signup-email" type="email" placeholder="Email address" autocomplete="email">
+              <p class="error">Please enter your email address.</p>
+            </div>
+
+            <div class="field">
+              <div class="password-field">
+                <label class="sr-only" for="signup-password">Password</label>
+                <input id="signup-password" type="password" placeholder="Password" autocomplete="new-password">
+                <button class="eye-button" type="button" aria-label="Show password" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2.5 12s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    <circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                </button>
+              </div>
+              <p class="error">Please enter a password.</p>
+            </div>
+
+            <div class="field">
+              <div class="password-field">
+                <label class="sr-only" for="confirm-password">Confirm password</label>
+                <input id="confirm-password" type="password" placeholder="Confirm password" autocomplete="new-password">
+                <button class="eye-button" type="button" aria-label="Show password" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2.5 12s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    <circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                </button>
+              </div>
+              <p class="error">Please confirm your password.</p>
+            </div>
+
+            <div class="field">
+              <div class="code-field">
+                <label class="sr-only" for="signup-code">Verification code</label>
+                <input id="signup-code" type="tel" maxlength="6" placeholder="Code">
+                <span aria-hidden="true"></span>
+                <button type="button">Send code</button>
+              </div>
+              <p class="error">Please enter the verification code.</p>
+            </div>
+
+            <p class="agreement signup-agreement">
+              By signing up, you consent to DeepSeek's
+              <a href="https://cdn.deepseek.com/policies/en-US/deepseek-terms-of-use.html?locale=en_US">Terms of Use</a>
+              and
+              <a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html?locale=en_US">Privacy Policy</a>.
+            </p>
+
+            <button class="login-button" type="submit">Sign up</button>
+            <button class="back-button" type="button" data-open-view="login">Log in</button>
           </form>
         </div>
       </section>
