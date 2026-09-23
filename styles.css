@@ -292,3 +292,34 @@ input:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: 2px;
 }
+
+@media (max-width: 440px) {
+  .page {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .login {
+    width: 100%;
+  }
+
+  .cookie-banner {
+    right: 16px;
+    width: auto;
+    max-width: none;
+  }
+}
+
+@media (max-height: 650px) {
+  .page {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .login-button,
+  .cookie-button,
+  .eye-button {
+    transition: background-color 150ms ease;
+  }
+}
