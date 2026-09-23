@@ -237,58 +237,6 @@ input::placeholder {
   border: 0;
 }
 
-.cookie-banner {
-  width: 400px;
-  max-width: calc(100% - 32px);
-  padding: 20px;
-  position: fixed;
-  bottom: 12px;
-  left: 16px;
-  z-index: 10;
-  border-radius: 16px;
-  background: var(--white);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 12px 36px rgba(0, 0, 0, 0.12);
-}
-
-.cookie-banner h2 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.cookie-banner p {
-  margin: 8px 0 16px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.cookie-banner p a {
-  color: var(--text);
-}
-
-.cookie-button {
-  width: 100%;
-  min-height: 44px;
-  border-radius: 999px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.cookie-button.secondary {
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--text);
-}
-
-.cookie-button.primary {
-  margin-top: 8px;
-  border: 0;
-  background: var(--blue);
-  color: var(--white);
-}
-
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
@@ -306,11 +254,6 @@ input:focus-visible {
     width: 100%;
   }
 
-  .cookie-banner {
-    right: 16px;
-    width: auto;
-    max-width: none;
-  }
 }
 
 @media (max-height: 650px) {
@@ -321,7 +264,6 @@ input:focus-visible {
 
 @media (prefers-reduced-motion: no-preference) {
   .login-button,
-  .cookie-button,
   .eye-button {
     transition: background-color 150ms ease;
   }
