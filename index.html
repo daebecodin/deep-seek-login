@@ -18,7 +18,8 @@
           <span>deepseek</span>
         </a>
 
-        <form class="login-form" novalidate>
+        <div class="view" data-view="login">
+        <form class="form login-form" novalidate>
           <div class="field">
             <label class="sr-only" for="account">Phone number or email address</label>
             <input id="account" name="account" type="text" placeholder="Phone number / email address" autocomplete="username" aria-describedby="account-error">
@@ -47,7 +48,7 @@
           </p>
 
           <div class="form-links">
-            <a href="#">Forgot password?</a>
+            <button class="link-button" type="button" data-open-view="reset">Forgot password?</button>
             <a href="#">Sign up</a>
           </div>
 
@@ -59,6 +60,35 @@
             <a href="#">Login with Apple</a>
           </div>
         </form>
+        </div>
+
+        <div class="view" data-view="reset" hidden>
+          <h1 class="view-title">Reset password</h1>
+          <p class="view-description">
+            Enter your phone number or email address and we will send you a verification code to reset your password.
+          </p>
+
+          <form class="form reset-form" novalidate>
+            <div class="field">
+              <label class="sr-only" for="reset-account">Email address or phone number</label>
+              <input id="reset-account" type="text" placeholder="Email address / +86 phone number">
+              <p class="error">Please enter your email address or phone number.</p>
+            </div>
+
+            <div class="field">
+              <div class="code-field">
+                <label class="sr-only" for="reset-code">Verification code</label>
+                <input id="reset-code" type="tel" maxlength="6" placeholder="Code">
+                <span aria-hidden="true"></span>
+                <button type="button">Send code</button>
+              </div>
+              <p class="error">Please enter the verification code.</p>
+            </div>
+
+            <button class="login-button reset-button" type="submit">Continue</button>
+            <button class="back-button" type="button" data-open-view="login">Back to log in</button>
+          </form>
+        </div>
       </section>
 
       <footer class="footer">

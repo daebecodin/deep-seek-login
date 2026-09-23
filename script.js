@@ -1,6 +1,8 @@
 const passwordInput = document.querySelector("#password");
 const eyeButton = document.querySelector(".eye-button");
 const loginForm = document.querySelector(".login-form");
+const resetForm = document.querySelector(".reset-form");
+const views = document.querySelectorAll(".view");
 
 eyeButton.addEventListener("click", () => {
   const passwordIsHidden = passwordInput.type === "password";
@@ -28,4 +30,16 @@ loginForm.querySelectorAll("input").forEach((input) => {
     field.classList.remove("invalid");
     input.setAttribute("aria-invalid", "false");
   });
+});
+
+document.querySelectorAll("[data-open-view]").forEach((button) => {
+  button.addEventListener("click", () => {
+    views.forEach((view) => {
+      view.hidden = view.dataset.view !== button.dataset.openView;
+    });
+  });
+});
+
+resetForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 });

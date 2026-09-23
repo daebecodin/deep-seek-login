@@ -71,7 +71,7 @@ a {
   height: 29px;
 }
 
-.login-form {
+.form {
   display: flex;
   flex-direction: column;
 }
@@ -96,6 +96,43 @@ a {
 .password-field input {
   border: 0;
   background: transparent;
+}
+
+.code-field {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--light);
+}
+
+.code-field input {
+  min-width: 0;
+  height: 100%;
+  flex: 1;
+  padding: 0 16px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.code-field span {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+}
+
+.code-field button {
+  height: 100%;
+  padding: 0 16px 0 12px;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  cursor: pointer;
 }
 
 .field > input:focus,
@@ -184,6 +221,19 @@ input::placeholder {
   text-decoration: none;
 }
 
+.link-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
 .form-links a:hover {
   text-decoration: underline;
 }
@@ -218,6 +268,42 @@ input::placeholder {
   width: 1px;
   height: 12px;
   background: var(--border);
+}
+
+.view[hidden] {
+  display: none;
+}
+
+.view-title {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.view-description {
+  margin: 0 0 16px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.reset-button {
+  margin-top: 20px;
+}
+
+.back-button {
+  align-self: center;
+  margin-top: 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .footer {
