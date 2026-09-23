@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A static recreation of the DeepSeek login page.">
+    <title>DeepSeek Login</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%233964fe'/%3E%3Cpath d='M7 18c5-7 11-8 18-5-2 8-11 12-18 5Z' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="login" aria-label="DeepSeek login form">
+        <a class="logo" href="#" aria-label="DeepSeek home">
+          <svg class="logo-icon" viewBox="0 0 38 30" aria-hidden="true">
+            <path d="M35 5c-2 1-4 2-7 1-3-4-8-5-13-4C6 3 1 10 2 18c1 7 7 11 14 10 4 0 7-2 10-5 3 1 6 0 7-1-3-1-4-2-5-3 2-3 4-7 4-11 2 0 4-1 5-3 1-2 1-3-2 0ZM8 14c7-1 11 3 15 9-5 3-13 0-15-9Zm15-1a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" fill="currentColor"/>
+          </svg>
+          <span>deepseek</span>
+        </a>
+
+        <form class="login-form">
+          <label class="sr-only" for="account">Phone number or email address</label>
+          <input id="account" name="account" type="text" placeholder="Phone number / email address" autocomplete="username" required>
+
+          <div class="password-field">
+            <label class="sr-only" for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
+            <button class="eye-button" type="button" aria-label="Show password" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2.5 12s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </button>
+          </div>
+
+          <p class="agreement">
+            By signing up or logging in, you consent to DeepSeek's
+            <a href="https://cdn.deepseek.com/policies/en-US/deepseek-terms-of-use.html?locale=en_US">Terms of Use</a>
+            and
+            <a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html?locale=en_US">Privacy Policy</a>.
+          </p>
+
+          <div class="form-links">
+            <a href="#">Forgot password?</a>
+            <a href="#">Sign up</a>
+          </div>
+
+          <button class="login-button" type="submit">Log in</button>
+
+          <div class="social-links">
+            <a href="#">Log in with Google</a>
+            <span aria-hidden="true"></span>
+            <a href="#">Login with Apple</a>
+          </div>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <a href="https://beian.miit.gov.cn">浙ICP备2023025841号</a>
+        <span>·</span>
+        <a href="#">Contact us</a>
+      </footer>
+    </main>
+
+    <aside class="cookie-banner" aria-label="Cookie settings">
+      <h2>Cookie Settings</h2>
+      <p>
+        We use cookies to provide and improve services and ensure security. Click to view our
+        <a href="https://cdn.deepseek.com/policies/en-US/cookies-policy.html">cookie policy</a>.
+        You can choose to accept all or only necessary cookies, which may affect some functionalities.
+      </p>
+      <button class="cookie-button secondary" type="button">Necessary cookies only</button>
+      <button class="cookie-button primary" type="button">Accept all cookies</button>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
