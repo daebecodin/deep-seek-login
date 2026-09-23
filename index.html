@@ -18,19 +18,25 @@
           <span>deepseek</span>
         </a>
 
-        <form class="login-form">
-          <label class="sr-only" for="account">Phone number or email address</label>
-          <input id="account" name="account" type="text" placeholder="Phone number / email address" autocomplete="username" required>
+        <form class="login-form" novalidate>
+          <div class="field">
+            <label class="sr-only" for="account">Phone number or email address</label>
+            <input id="account" name="account" type="text" placeholder="Phone number / email address" autocomplete="username" aria-describedby="account-error">
+            <p class="error" id="account-error">Please enter the phone number / email address.</p>
+          </div>
 
-          <div class="password-field">
-            <label class="sr-only" for="password">Password</label>
-            <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
-            <button class="eye-button" type="button" aria-label="Show password" aria-pressed="false">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M2.5 12s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-                <circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
-              </svg>
-            </button>
+          <div class="field">
+            <div class="password-field">
+              <label class="sr-only" for="password">Password</label>
+              <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" aria-describedby="password-error">
+              <button class="eye-button" type="button" aria-label="Show password" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M2.5 12s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+            </div>
+            <p class="error" id="password-error">Please enter your password.</p>
           </div>
 
           <p class="agreement">

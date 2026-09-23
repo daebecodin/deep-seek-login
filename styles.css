@@ -4,6 +4,7 @@
   --text: #0f1115;
   --muted: #61666b;
   --faint: #8b929b;
+  --red: #e55555;
   --light: #f9fafb;
   --border: rgba(0, 0, 0, 0.1);
   --white: #ffffff;
@@ -75,7 +76,7 @@ a {
   flex-direction: column;
 }
 
-.login-form > input,
+.field > input,
 .password-field {
   width: 100%;
   height: 48px;
@@ -84,7 +85,7 @@ a {
   background: var(--light);
 }
 
-.login-form > input,
+.field > input,
 .password-field input {
   padding: 0 16px;
   outline: 0;
@@ -97,11 +98,7 @@ a {
   background: transparent;
 }
 
-.login-form > input {
-  margin-bottom: 22px;
-}
-
-.login-form > input:focus,
+.field > input:focus,
 .password-field:focus-within {
   border-color: var(--blue);
 }
@@ -114,7 +111,6 @@ input::placeholder {
 .password-field {
   display: flex;
   align-items: center;
-  margin-bottom: 22px;
 }
 
 .password-field input {
@@ -143,6 +139,25 @@ input::placeholder {
 .eye-button svg {
   width: 16px;
   height: 16px;
+}
+
+.error {
+  min-height: 22px;
+  margin: 0;
+  padding: 2px 4px;
+  color: var(--red);
+  font-size: 12px;
+  line-height: 18px;
+  visibility: hidden;
+}
+
+.field.invalid > input,
+.field.invalid .password-field {
+  border-color: var(--red);
+}
+
+.field.invalid .error {
+  visibility: visible;
 }
 
 .agreement {
